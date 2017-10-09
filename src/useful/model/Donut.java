@@ -22,4 +22,9 @@ public class Donut
 		this();
 		this.flavor = flavor;
 	}
+	
+	public String getFlavor()
+	{
+		return flavor;
+	}
 }

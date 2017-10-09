@@ -31,9 +31,9 @@ public class ToolController
 		
 		for(int index = 0; index < donutList.size(); index += 1)
 		{
-			String curretFlavor = donutList.get(index).getFlavor();
+			String currentFlavor = donutList.get(index).getFlavor();
 			
-			Donut currentFlavor = donutList.get(index);
+			Donut currentDonut = donutList.get(index);
 			String flavor = currentDonut.getFlavor();
 			
 			if(currentFlavor.equals(favorite))
@@ -60,5 +60,17 @@ public class ToolController
 		donutList.add(springSmitch);
 		donutList.add(trashDonut);
 	}
-	
+
+	private void changeTheList()
+	{
+		display.displayText("The list is this big: " + donutList.size());
+		Donut removed = donutList.remove(0);
+		display.displayText(removed.getFlavor() + "was removed from the list");
+		display.displayText("Now it is this big: " + donutList.size());
+		donutList.add(remove);
+		
+		display.displayText("The list is still contans: " + donutList.size() + " items.");
+		removed = donutList.set(3, new Donut());
+		display.displayText("The donut with flavor "  removed.getFlavor() + " has been removed");
+	}
 }
