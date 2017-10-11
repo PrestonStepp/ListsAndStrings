@@ -19,6 +19,12 @@ public class ToolController
 	public void start()
 	{
 		Donut temp = new Donut();
+		ArrayList<String> tempList = new ArrayList<String>();
+		tempList.add("this is a word sequence");
+		tempList.add("");
+		tempList.add("");
+		tempList.add("");
+		
 		
 		donutList.add(temp);
 		fillTheList();
