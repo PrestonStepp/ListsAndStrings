@@ -27,4 +27,14 @@ public class Donut
 	{
 		return flavor;
 	}
+
+	public Object getShape() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setShape(String testShape) {
+		// TODO Auto-generated method stub
+		
+	}
 }
