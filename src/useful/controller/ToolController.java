@@ -74,7 +74,37 @@ public class ToolController
 		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed");
 	}
 	
+	public int maxLength(ArrayList<String> myList)
+	{
+		int max =0;
+		
+		for (int index = 0; index < myList.size(); index += 1)
+		{
+			if (max < myList.get(index).length())
+			{
+				max = myList.get(index).length();
+			}
+		}
+			
+		return max;
+	}
 	
+	public String getLongesString(ArrayList<String> myList)
+	{
+		String longest = "";
+		int max = 0;
+		
+		for(int index = 0; index < myList.size(); index += 1)
+		{
+			if(myList.get(index).length() > max)
+			{
+				max = myList.get(index).length();
+				longest = myList.get(index);
+			}
+		}
+		
+		return longest;
+	}
 
 	
 	public ArrayList<Donut> getDonutList()
